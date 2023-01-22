@@ -9,7 +9,9 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'buscador',component:BuscadorComponent},
   {path:'nav',component:NavComponent},
-  {path:'footer',component:FooterComponent}
+  {path:'footer',component:FooterComponent},
+  {path:'buscar/:busqueda',component:BuscadorComponent},
+  {path:'**',pathMatch:'full',redirectTo:'home'}
 ];
 
 @NgModule({

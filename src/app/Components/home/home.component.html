@@ -1,1 +1,61 @@
-<p>home works!</p>
+<div class="container">
+    <h1 class="animated fadein fast text-center titulo"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; New Releases &nbsp;&nbsp;<i class="fa-solid fa-music"></i></h1>
+    <hr>
+    <!-- <div class="">
+
+        <div class="card animated fadein fast" *ngFor="let item of Releases">
+            <img [src]="item.images[0].url" alt="" class="card-img-top img-fluid">
+            <div class="card-body">
+                <h4 class="card-tittle">{{item.name}}</h4>
+                <h4 class="card-tittle">{{item.artists[0].name}}</h4>
+                <p class="card-text">{{item.biografia}}</p>
+                <p class="card-text"><small class="text-muted">{{item.fecha}}</small></p>
+                <p class="card-text"><small class="text-muted">{{item.universo}}</small></p> 
+        
+                <button class="btn btn-outline-primary btn-block">Ver más...</button>
+            </div>
+        </div>
+
+    </div> -->
+
+
+            <!-- <div class="card" *ngFor="let item of Releases">
+                <img [src]="item.images[0].url" alt="" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h5 class="card-tittle">{{item.name}}</h5>
+                    <p class="card-text">{{item.artists[0].name}}</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div> -->
+
+
+          <!--   <div class="row row-cols-1 row-cols-md-3" *ngFor="let item of Releases">
+                <div class="col mb-4">
+                    <img [src]="item.images[0].url" alt="" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-tittle">{{item.name}}</h5>
+                        <p class="card-text">{{item.artists[0].name}}</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>  -->   
+
+
+            <div class="card-columns">
+                <div class="card animated fadein fast" *ngFor="let item of Releases">
+                    <img [src]="item.images[0].url" alt="" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h6 class="card-tittle">{{item.name}}</h6>
+                        <p class="card-text">{{item.artists[0].name}}</p>
+                        <p class="card-text"><small class="text-muted">Release date: {{item.release_date}}</small></p>
+                        <a href="#" class="btn btn-success"> <i class="fa-solid fa-play"></i>&nbsp; Listen the song</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+</div>

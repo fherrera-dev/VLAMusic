@@ -1,1 +1,16 @@
-<p>buscador works!</p>
+
+<div class="container">
+    <h1 class="animated fadein fast text-center card-buscador">Buscador</h1>
+            <div class="card-columns">
+                <div class="card animated fadein fast " *ngFor="let item of miBusqueda" >
+                    <img [src]="item.images[0].url" alt="" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h6 class="card-tittle">{{item.name}}</h6>
+                        <p class="card-text">Genero: {{item.genres[0]}}</p>
+                        <p class="card-text"><small class="text-muted">Release date: </small></p>
+                        <a href="#" class="btn btn-success">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+<!--  -->
+</div>
