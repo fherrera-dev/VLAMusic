@@ -8,6 +8,7 @@
                     <div class="card-body">
                         <h6 class="card-tittle">{{item.name}}</h6>
                         <p class="card-text" *ngIf="item.genres[0]"><small class="text-muted">Genero: {{item.genres[0] | titlecase}} </small></p>
+                        <p class="card-text" >Followers: {{item.followers.total | number}} </p>
                         <a href="" class="btn btn-success">Ver Artista...</a>
                     </div>
                 </div>

@@ -13,8 +13,8 @@ export class BuscadorComponent implements OnInit {
   miBusqueda:any[]=[];
   artista:string ="";
   msg:string="";
-  img:string="";
-  Noimg:string="";
+
+
 
   constructor(private _route:ActivatedRoute, private _releaseService:ApiserviceService) { }
 

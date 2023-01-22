@@ -22,14 +22,14 @@ export class ApiserviceService {
   
   OptenerCanciones():Observable<any>{
     const headers = new HttpHeaders({
-      "Authorization" : "Bearer BQDUyBjOr7eiMUNnF3hFLV7dxNEJKkFg0EAGglWQcNSYyJ7j647iC_mVlcahZcI8MjKfZKpzbJAqm3AVOfw-X6COjoqvUMcKYrcCW6rgwIb4gHHY9eo"
+      "Authorization" : "Bearer BQBxk2E6Csia4qqvKwPdIOYfs1rsMBNrwZTc0C4x66ycqj9VXuSNz2A1q2CxNFbi85V5MZfjMSGTR4kRCg5wpF_mN9M9EZ_4gQJs4YwKTC_iKYZ9EVY"
     })
-    return this.Http.get<any>("https://api.spotify.com/v1/browse/new-releases?country=US&limit=50",{headers});
+    return this.Http.get<any>("https://api.spotify.com/v1/browse/new-releases?country=US&limit=30",{headers});
   }
 
   BuscadorCanciones(nombre:string): Observable<any>{
     const headers = new HttpHeaders({
-      "Authorization" : "Bearer BQDUyBjOr7eiMUNnF3hFLV7dxNEJKkFg0EAGglWQcNSYyJ7j647iC_mVlcahZcI8MjKfZKpzbJAqm3AVOfw-X6COjoqvUMcKYrcCW6rgwIb4gHHY9eo"
+      "Authorization" : "Bearer BQBxk2E6Csia4qqvKwPdIOYfs1rsMBNrwZTc0C4x66ycqj9VXuSNz2A1q2CxNFbi85V5MZfjMSGTR4kRCg5wpF_mN9M9EZ_4gQJs4YwKTC_iKYZ9EVY"
     })
     return this.Http.get<any>(`https://api.spotify.com/v1/search?q=${nombre}&type=artist`,{headers});
   }
