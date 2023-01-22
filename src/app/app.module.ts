@@ -11,6 +11,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,

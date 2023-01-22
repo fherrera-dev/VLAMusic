@@ -12,6 +12,9 @@ export class BuscadorComponent implements OnInit {
   
   miBusqueda:any[]=[];
   artista:string ="";
+  msg:string="";
+  img:string="";
+  Noimg:string="";
 
   constructor(private _route:ActivatedRoute, private _releaseService:ApiserviceService) { }
 
@@ -22,14 +25,25 @@ export class BuscadorComponent implements OnInit {
       //console.log(this.artista);
       
     })
+   
+    if (!this.artista) {
+      console.log('No se ha realizado una busqueda');
+      this.msg='No se ha realizado una busqueda...'
+      
+    } else {
+      this._releaseService.BuscadorCanciones(this.artista).subscribe((data:any)=>{
+        console.log(this.artista)
+        //this.img=data.artists.items.images[0].url;
+        //this.Noimg='assets/Imagenes/dummy-person.jpg'
 
-   this._releaseService.BuscadorCanciones(this.artista).subscribe((data:any)=>{
-      console.log(this.artista)
-      this.miBusqueda=data.artists.items
-      console.log(this.miBusqueda)
-    })
+        
 
-    
+        this.miBusqueda=data.artists.items
+        console.log(this.miBusqueda)
+      })
+      
+    }
+
     /* this._releaseService.BuscadorCanciones(data["termino"]).subscribe(data =>{
       console.log(data);
     })
