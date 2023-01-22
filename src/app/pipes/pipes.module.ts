@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+/* import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ErrorimgpipePipe } from './errorimgpipe.pipe';
 
@@ -9,4 +9,4 @@ import { ErrorimgpipePipe } from './errorimgpipe.pipe';
   imports: [CommonModule],
   exports:[ErrorimgpipePipe]
 })
-export class PipesModule { }
+export class PipesModule { } */

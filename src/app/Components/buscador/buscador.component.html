@@ -4,7 +4,7 @@
     <h2>{{msg}}</h2>
             <div class="card-columns">   
                 <div class="card animated fadein fast " *ngFor="let item of miBusqueda" >
-                    <img [src]="item.images[0].url" alt="" class="card-img-top img-fluid">
+                    <img [src]="item.images | errorimgpipe" alt="" class="card-img-top img-fluid">
                     <div class="card-body">
                         <h6 class="card-tittle">{{item.name}}</h6>
                         <p class="card-text" *ngIf="item.genres[0]"><small class="text-muted">Genero: {{item.genres[0] | titlecase}} </small></p>

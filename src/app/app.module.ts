@@ -10,6 +10,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
+import { ErrorimgpipePipe } from './pipes/errorimgpipe.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     NavComponent,
     BuscadorComponent,
-    FooterComponent
+    FooterComponent,
+    ErrorimgpipePipe
   ],
   imports: [
     BrowserModule,
