@@ -18,25 +18,27 @@ export class BuscadorComponent implements OnInit {
 
   ngOnInit(): void {
     this._route.params.subscribe(data =>{
-      console.log(data['busqueda']);
+      //console.log(data['busqueda']);
       this.artista=data['busqueda'];
       console.log(this.artista + ' estoy en los parametros');
+
+      if (!this.artista) {
+        console.log('No se ha realizado una busqueda | estoy en el if');
+        this.msg='No se ha realizado una busqueda...'
+        
+      } else {
+        this._releaseService.BuscadorCanciones(this.artista).subscribe((data:any)=>{
+          //console.log(this.artista);
+          this.miBusqueda=data.artists.items;
+          console.log(this.miBusqueda);
+          console.log('Estoy en el arreglo de busqueda');
+        })
+        
+      }
       
     })
    
-    if (!this.artista) {
-      console.log('No se ha realizado una busqueda | estoy en el if');
-      this.msg='No se ha realizado una busqueda...'
-      
-    } else {
-      this._releaseService.BuscadorCanciones(this.artista).subscribe((data:any)=>{
-        console.log(this.artista);
-        this.miBusqueda=data.artists.items;
-        console.log(this.miBusqueda);
-        console.log('Estoy en el arreglo de busqueda');
-      })
-      
-    }
+    
 
     /* this._releaseService.BuscadorCanciones(data["termino"]).subscribe(data =>{
       console.log(data);

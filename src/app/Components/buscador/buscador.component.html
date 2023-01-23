@@ -1,7 +1,7 @@
 
 <div class="container">
     <h1 class="animated fadein fast text-center card-buscador">Buscador</h1>
-    <h2>{{msg}}</h2>
+    <h2 *ngIf="!artista">{{msg}}</h2>
             <div class="card-columns">   
                 <div class="card animated fadein fast " *ngFor="let item of miBusqueda" >
                     <img [src]="item.images | errorimgpipe" alt="" class="card-img-top img-fluid">
