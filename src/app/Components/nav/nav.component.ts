@@ -17,6 +17,6 @@ export class NavComponent implements OnInit {
   buscarArtista(busqueda:string){
     console.log(busqueda);
     this._router.navigate(['/buscar',busqueda])
-  }
+  };
 
 }
