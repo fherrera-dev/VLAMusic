@@ -1,15 +1,15 @@
 
 <div class="container">
-    <h1 class="animated fadein fast text-center card-buscador">Buscador</h1>
-    <h2 *ngIf="!artista">{{msg}}</h2>
+    <h1 class="animated fadein fast text-center card-buscador"><i class="fa-solid fa-search"></i>&nbsp;Buscador</h1>
+    <h2 *ngIf="!artista" class="animated fadein fast text-center">{{msg}}</h2>
             <div class="card-columns">   
                 <div class="card animated fadein fast " *ngFor="let item of miBusqueda" >
-                    <img [src]="item.images | errorimgpipe" alt="" class="card-img-top img-fluid">
+                    <div class="cardImg"><img [src]="item.images | errorimgpipe" alt="" class="card-img-top img-fluid"></div>
                     <div class="card-body">
-                        <h6 class="card-tittle">{{item.name}}</h6>
+                        <h6 class="card-tittle">{{item.name | titlecase}}</h6>
                         <p class="card-text" *ngIf="item.genres[0]"><small class="text-muted">Genero: {{item.genres[0] | titlecase}} </small></p>
                         <p class="card-text" >Followers: {{item.followers.total | number}} </p>
-                        <a href="" class="btn btn-success">Ver Artista...</a>
+                        <a href="" class="btn btn-success"> <i class="fa-solid fa-eye"></i>&nbsp;Ver Artista ...</a>
                     </div>
                 </div>
             </div>

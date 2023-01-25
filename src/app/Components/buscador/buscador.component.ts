@@ -37,15 +37,13 @@ export class BuscadorComponent implements OnInit {
       }
       
     })
-   
-    
 
     /* this._releaseService.BuscadorCanciones(data["termino"]).subscribe(data =>{
       console.log(data);
     })
     console.log(this.miBusqueda)*/
 }
-//BuscadorCanciones(nombre:string): Observable<any>{
+
 
 
 }
