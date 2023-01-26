@@ -22,35 +22,20 @@ export class ApiserviceService {
   
   OptenerCanciones():Observable<any>{
     const headers = new HttpHeaders({
-      "Authorization" : "Bearer BQCVShBee3HnAKr03lmxPn_prJHRgv6gGEFl3P0x3skBk_eO17Bx8nspXJWsYG2Y6NqCfMkKuXXEc_jOfI59mJZ953-tr3xah5yrExDFDrUKKRQYLLby"
+      "Authorization" : "Bearer BQCex8YTAZCD1tLCmItu1-uKqx1RZQ7x8K7h9faPkQ7gZbsMFZk67kRdvZyUolpZRJCMV7CykJS4UM8cU2_AVk0xaiGOWda2EJUq5xqq1M1_Sxm7fj1J"
     })
     return this.Http.get<any>("https://api.spotify.com/v1/browse/new-releases?country=US&limit=30",{headers});
   }
 
   BuscadorCanciones(nombre:string): Observable<any>{
     const headers = new HttpHeaders({
-      "Authorization" : "Bearer BQCVShBee3HnAKr03lmxPn_prJHRgv6gGEFl3P0x3skBk_eO17Bx8nspXJWsYG2Y6NqCfMkKuXXEc_jOfI59mJZ953-tr3xah5yrExDFDrUKKRQYLLby"
+      "Authorization" : "Bearer BQCex8YTAZCD1tLCmItu1-uKqx1RZQ7x8K7h9faPkQ7gZbsMFZk67kRdvZyUolpZRJCMV7CykJS4UM8cU2_AVk0xaiGOWda2EJUq5xqq1M1_Sxm7fj1J"
     })
     return this.Http.get<any>(`https://api.spotify.com/v1/search?q=${nombre}&type=artist`,{headers});
   }
 
 
- /*buscador(busqueda:string){
-    let arreglo:any[]=[];
-    busqueda = busqueda.toLocaleLowerCase();
 
-    for (let i = 0; i < this.Releases.length; i++) {
-      let rel = this.Releases[i];
-      let nombre = rel.nombre.toLocaleLowerCase();
-
-      if (nombre.indexOf(busqueda) >=0) {
-        arreglo.push(rel);
-      }
-      
-    }
-    return arreglo;
-  }*/
- 
   
 
 
